@@ -15,14 +15,6 @@ function modelLoaded(){
     console.log("poseNet model is initialized 🎉");
 }
 
-function draw(){
-    background('#969A97');
-    document.getElementById("font_size").innerHTML="Font size of the text will be...🛸= "+difference+"px";
-    textSize(difference);
-    fill('#FFE787');
-    text('Zoinkythicccc', 50,400);
-}
-
 function gotPoses(results){
     if(results.length>0){
         console.log(results);
@@ -31,4 +23,12 @@ function gotPoses(results){
         difference=floor(leftWristX-rightWristX);
         console.log("leftWristX= "+leftWristX+"rightWristX= "+rightWristX+"difference= "+difference);
     }
+}
+
+function draw(){
+    background('#969A97');
+    document.getElementById("font_size").innerHTML="Font size of the text will be...🛸= "+difference+"px";
+    textSize(difference);
+    fill('#FFE787');
+    text('Zoinkythicccc', 50,400);
 }
